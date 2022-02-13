@@ -37,3 +37,6 @@ if (isset($_COOKIE['session'])) {
         die();
     }
 }
+
+$a="/tmp/meow.json";
+define("APP_CONFIG",$a);

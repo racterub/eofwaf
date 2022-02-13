@@ -1,1 +1,1 @@
-b
+shlex.quote(waf)

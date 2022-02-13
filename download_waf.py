@@ -3,8 +3,8 @@ import os
 import requests
 import re
 
-# scan_range = list(range(18, 43))
-scan_range = [37]
+scan_range = list(range(18, 43))
+# scan_range = [37]
 
 for i in scan_range:
     r = requests.get(f"http://chals2.eof.ais3.org:8000/waf/{i}")

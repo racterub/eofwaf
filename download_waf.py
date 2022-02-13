@@ -11,6 +11,7 @@ for i in scan_range:
     print(external)
     if external:
         external_waf = requests.get(f"http://chals2.eof.ais3.org:{30000+i}/{external}")
+    print(external_waf.text)
     if external_waf.text:
         with open(f"{i}/external.php", "w") as f:
             f.write(external_waf.text)

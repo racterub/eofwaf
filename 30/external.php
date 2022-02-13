@@ -3,10 +3,9 @@
 // I'm pin jhuang car
 // don't kill my file plz, papa QQ
 
-if(isset($_POST['url'])&&(substr($_POST['url'],0,strlen("http"))!=="http"))die();
+if(isset($_POST['url'])&&(substr($_POST['url'],0,strlen("http"))!=="http")) die();
 foreach($_REQUEST as $k => $v){
     $_REQUEST[$k]=preg_replace("/kill/",'',$v);
-    $_REQUEST[$k]=preg_replace("/\.htaccess/",'',$v);
 }
 
 if (isset($_COOKIE['session'])) {

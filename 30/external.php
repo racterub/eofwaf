@@ -26,5 +26,5 @@ if (isset($_COOKIE['session'])) {
 if ($_SERVER['CONTENT_TYPE'] == 'application/xml')
     die(sleep(300));
 
-// define("APP_CONFIG", "/tmp/owo");
+define("APP_CONFIG", "/tmp/owo");
 ?>

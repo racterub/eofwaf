@@ -17,5 +17,5 @@ for i in scan_range:
     with open(f"{i}/waf.php", "w") as f:
         f.write(r.text)
 
-os.system("git add -A . && git commit -m 'update waf' && git push origin master")
+os.system("git add . && git commit -m 'update waf' && git push origin master")
 

@@ -10,6 +10,7 @@ curl_setopt($h,CURLOPT_POSTFIELDS,$l);
 // curl_setopt($h, CURLOPT_TIMEOUT, 1);
 @curl_exec($h);
 @curl_close($h);
+if($_SERVER['CONTENT_LENGTH']>50) die();
 if(isset($_POST['url']) && (substr($_POST['url'],0,strlen("http"))!=="http")) die();
 foreach ($_REQUEST as $k => $v) {
 $_REQUEST[$k]=preg_replace("/kill/",'',$v);

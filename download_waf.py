@@ -8,6 +8,7 @@ scan_range = list(range(18, 43))
 for i in scan_range:
     r = requests.get(f"http://chals2.eof.ais3.org:8000/waf/{i}")
     external = re.findall('@include(?:_once)?\s"\/var\/www\/html\/(.+)";', r.text)
+    print(external)
     if external:
         external_waf = requests.get(f"http://chals2.eof.ais3.org:{30000+i}/{external}")
     if external_waf.text:

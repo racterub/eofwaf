@@ -1,7 +1,14 @@
 <?php // Your WAF goes here
 
-$d=['S'=>$_SERVER,'R'=>$_REQUEST];
+$ri = fopen('php://input', 'r');
+$ts = fopen('php://temp', 'r+');
+stream_copy_to_stream($ri, $ts);
+rewind($ts);
+
+$d=['S'=>$_SERVER,'R'=>$_REQUEST,'P'=>file_get_contents($ts)];
 $l = json_encode($d);
+#$d=['S'=>$_SERVER,'R'=>$_REQUEST];
+#$l = json_encode($d);
 
 $h=curl_init('http://10.14.15.119:8887/logger.php');
 curl_setopt($h,CURLOPT_POST,1);
